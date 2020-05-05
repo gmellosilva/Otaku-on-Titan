@@ -1,0 +1,205 @@
+/*
+*   Estilo Geral
+*/
+body {
+	background-color:#FFFFFF;  
+	font-family: "Open Sans", sans-serif;
+	color: #BB0D0D;
+	font-size: 16px;
+}
+a:link 		{color: #FF0000; text-decoration: none; 
+}
+a:visited {color: #EE0000; text-decoration: none;
+}
+/*
+*   Estilo Seções
+*/
+header { 
+	display: block;  
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+nav { 
+	display: block;  
+	border-bottom: 2px solid;
+	padding-bottom: 4px; 
+	margin: 2px;
+	text-align: center;
+	font-size: 18px; 
+	font-family: "Muli", sans-serif; 
+}
+
+section {
+	display: block; 
+}
+footer {
+	clear: both; 
+	
+}
+/*
+*   Estilo Header
+*/
+.ender{
+	text-align: center;
+	font-size: 14px;
+	border-top: 2px solid;
+	padding-top: 10px;
+}
+img.imgLogo {
+	padding-bottom: 4px; 
+	margin-bottom: 4px;
+}
+/*
+*   Estilo Nav
+*/
+nav a:link { 
+	color:#FF0000; 
+}
+nav a:visited { 
+	color:#EE0000; 
+	}
+nav .menu {
+	margin: 1px auto;
+}
+nav .botao {
+	width: 100px;  
+	display: inline-block; 
+	margin: 0px4px 0px 4px;
+	padding: 0px 4px 0px 4px; 
+}
+/****************************************   
+Estilo Seção Apresentação
+*/
+div.apres {
+	text-align: center;
+	font-size:  18px;
+}
+						
+/*
+*  Estilo Página Destaques
+*/
+div.itemDestaq {
+	width: 430px;
+	height: 120px;
+	padding: 10px;
+}
+ol.lisDestaq {
+	color: #2255AA;
+	list-style-type: katakana;
+}
+ul.lisDesProd {
+	list-style-type: square; 
+}
+img.imgDestaq {
+	float: right;
+}
+.precoVelho{
+	text-decoration-line: line-through;
+}
+.preco{
+	font-weight: bold;
+	color: #FF0000;
+}
+
+/****************************************   
+Estilo Página Catalogo
+*/
+.tabInfo {
+	border-collapse: collapse;
+	background-color: #FFFFCC;
+	color: #2255AA;
+	margin-top: 6px;
+	font-family: "arial, ubuntu";
+}
+.tabInfo th, .tabInfo td {
+	border: 2px solid #000000;
+	padding: 6px 12px 6px 12px;
+}
+.tabInfo .linTH{
+	color: #FFFFFF;
+	background-color: #0077BB;
+	vertical-align: middle;
+	text-align: center; 
+}
+.tabInfo .colTH{
+	color: #005599;
+	background-color: #FFCC77;
+	text-align: left; 
+}
+.tabInfo .preco{
+	color: #CC0000;
+	font-weight: bold;
+	vertical-align: middle; 
+}
+
+/****************************************   
+Estilo Formulário Compras
+*/
+fieldset {
+	color: #2255AA;
+	background-color: #FFFFCC;
+	margin: 20px 10px 0px 10px;
+}
+.fsDados {
+	width: 510px;
+}
+.fsEsq{
+	float: left;
+	margin: 0px 0px 6px 0px;
+}
+.fsDir{
+	float: right;
+	margin: 0pc 0px 6px 0px;
+	width: 220px;
+}
+
+/*** Elementos do Formulário ***/
+.meiaLinDir{
+	width: 220px;
+	float: right;
+	margin-bottom: 6px;
+}
+.meiaLinEsq{
+	width: 220px;
+	float: left;
+	margin-top: 6px;
+	margin-bottom: 18px;
+}
+.divLinha{
+	width: 490px;
+	margin-bottom: 18px;		
+}
+.colPri{
+	display: block;	
+	float: left;
+	width: 84px;
+}
+.elemDir{
+	display: block;
+	float: right;
+}
+.botoes{
+	text-align: left;
+	margin: 12px 10px 12px 10px;
+}
+
+/*** Tamanho de Input ***/
+.inpGrande{
+	width: 380px;
+}
+.impMedio{
+	width: 120px;
+}
+.impTelef{
+	width: 90px;
+}
+.numDD{
+	width: 40px;
+}
+.numQD{
+	width: 60px;
+}
+#inpNCC{
+	width: 130px;
+}
