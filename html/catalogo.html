@@ -4,6 +4,7 @@
 	<meta charset="utf-8">			
 	<title>OtakuOnTitan</title>
 	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/ont.js"></script>
 </head>
 <body>
 	<header>
@@ -28,8 +29,7 @@
 					<th class="linTH">Categoria</th>
 					<th class="linTH">Produto</th>
 					<th class="linTH">Descrição</th>
-					<th class="linTH">Foto</th>
-					<th class="linTH">Preço</th>
+					<th class="linTH">Foto/Preço</th>
 				</tr>
 			</thead>
 
@@ -37,39 +37,33 @@
 				<tr>
 					<th class="colTH" rowspan="2">Anime</th>
 					<td rowspan="2">Naruto Shippuden </td>
-					<td>Temporada 1 Box 1</td>
-					<td rowspan="2"><img src="../img/NarShipB1T01A80.jpg"></td>
-					<td class="preco">R$60,00</td>
+					<td><a href="#" onclick="janelaCatal(0);">Temporada 1 Box 1</a></td>
+					<td rowspan=6 id="mostraCatalogo"> 
+                        <div id="janela"></div>
+                        <div id='precoJanel'><span id="precoJanel"></span></div>
+                    </td>
 				</tr>
 				<tr>
-					<td>Temporada 1	 Box 2</td>
-					<td class="preco">R$60,00</td>
+					<td><a href="#" onclick="janelaCatal(1);"> Temporada 1 Box 2</a></td>
 				</tr>
 
 				<tr>
 					<th class="colTH" rowspan="3">Mangá</th>
 					<td rowspan="2">Attack on Titan</td>
-					<td>Volume 1-4</td>
-					<td rowspan="2"><img src="../img/AOT1-4A80.jpg"></td>
-					<td class="preco">R$ 130,00</td>
+					<td><a href="#" onclick="janelaCatal(2);">Volume 1-4</a></td>
 				</tr>
 				<tr>
-					<td>Volume 5-8</td>	
-					<td class="preco">R$ 130,00</td>
+					<td><a href="#" onclick="janelaCatal(3);">Volume 5-8</a></td>	
 				</tr>
 
 				<tr>
 					<td>Naruto</td>
-					<td>Box Parte 1 - Vol 1-27 - Inglês</td>
-					<td><img src="../img/NarutoBoxPart1A80.jpg"></td>
-					<td class="preco">R$ 600,00</td>
+					<td><a href="#" onclick="janelaCatal(4);">Box Parte 1 - Vol 1-27 - Inglês</a></td>
 				</tr>
 				<tr>
 					<th class="colTH">Colecionáveis</th>
 					<td>Death Note</td>
-					<td>Ryouk em PVC</td>
-					<td><img src="../img/RyukFigA80.jpg"></td>
-					<td class="preco">R$ 250,00</td>
+					<td><a href="#" onclick="janelaCatal(5);">Ryouk em PVC</a></td>
 				</tr>
 			</tbody>
 		</table>
