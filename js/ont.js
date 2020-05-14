@@ -27,3 +27,30 @@ function janelaCatal (index) {
 
 /*calculando digitos de verificação*/
 
+function validarCPF(cpf){
+    if(cpf.value.length != 11){
+        alert("CPF tem de ter 11 dígitos");
+        return;
+    }
+    else if(cpf.value.length == 11){
+        for (c=0; c<cpf.value.length; c++){
+            if (!(cpf.value[c]>='0' && cpf.value[c]<='9')){
+                alert('CPF só pode ter dígitos. Caracter "' + cpf.value[c] + '" inválido');
+                return;
+            };
+        };
+    };
+};
+
+/*function calculaDV(num) {
+    var resto=0, soma=0;
+    for (i = 2; i < 11; i++) {
+        soma = soma + ((num % 10) * i);
+        num = parseInt(num / 10);
+    }
+    resto = (soma % 11);
+    return (resto > 1) ? (11 -resto) : 0;
+};
+primeiro_digito = calculaDV(identCPF);
+segundo_digito = calculaDV(identCPF* 10 + primeiro_digito);
+*/

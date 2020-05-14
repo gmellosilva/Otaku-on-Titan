@@ -4,6 +4,7 @@
 	<meta charset="utf-8">			
 	<title>OtakuOnTitan</title>
 	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<script src="../js/ont.js"></script>
 </head>
 <body>
 	<header>
@@ -48,20 +49,22 @@
 						</fieldset>	
 	                </div>	
 
-					<div class="meiaLinEsq">						
-						<label for="cpf" class="colPri">CPF:</label>
-						<input type="text" name="cpf" class="impMedio" required>
-					</div>
+	                <div class='meiaLinEsq'>
+						<div class="divLinha">                        
+	                        <label for="cpf" class="colPri">CPF:</label>
+	                        <input type="text" name="cpf" id="cpf" pattern=”(\d{3}\d{3}\d{3}\d{2})|(\d{11})” onchange="validarCPF(this);" class="impMedio">
+	                    </div>
 
-					<div class="meiaLinEsq">	
-						<label for="tel" class="colPri">Telefone:</label> 
-						<input type="text" id="tel" class="impTelef" required>
-					</div>
+						<div class="divLinha">	
+							<label for="tel" class="colPri">Telefone:</label> 
+							<input type="text" id="tel" class="impTelef">
+						</div>
 
-					<div class="meiaLinEsq">
-						<label for="cel" class="colPri">Celular:</label>
-						<input type="text" class="impTelef" required>
-					</div>			
+						<div class="divLinha">
+							<label for="cel" class="colPri">Celular:</label>
+							<input type="text" class="impTelef">
+						</div>	
+					</div>		
 			</fieldset>
 
 			<fieldset class="fsDados">
