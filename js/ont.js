@@ -25,8 +25,7 @@ function janelaCatal (index) {
 * COMPRAS
 */
 
-/*calculando digitos de verificação*/
-
+    //validando tamanho e caracteres
 function validarCPF(cpf){
     if(cpf.value.length != 11){
         alert("CPF tem de ter 11 dígitos");
@@ -40,10 +39,13 @@ function validarCPF(cpf){
             };
         };
     };
-};
 
-/*function calculaDV(num) {
-    var resto=0, soma=0;
+    //validando os digitos do cpf
+
+function calculaDV(num) {
+    var resto=0, 
+        soma=0;
+
     for (i = 2; i < 11; i++) {
         soma = soma + ((num % 10) * i);
         num = parseInt(num / 10);
@@ -51,6 +53,20 @@ function validarCPF(cpf){
     resto = (soma % 11);
     return (resto > 1) ? (11 -resto) : 0;
 };
-primeiro_digito = calculaDV(identCPF);
-segundo_digito = calculaDV(identCPF* 10 + primeiro_digito);
-*/
+
+var digitosCPF = cpf.value.slice(-2, cpf.value.length);
+var identCPF = cpf.value.slice(0, 9); 
+
+primeiro_digito = calculaDV(identCPF)
+segundo_digito = calculaDV(identCPF* 10 + primeiro_digito)
+
+if (digitosCPF[0] != primeiro_digito || digitosCPF[1] != segundo_digito) {
+    alert("Digitos verificadores inválidos!");
+            return; 
+}
+
+};
+   
+   
+
+
