@@ -1,9 +1,4 @@
 /***************************
-* DESTAQUES
-*/
-
-
-/***************************
 * CATÁLOGO
 */
 
@@ -32,8 +27,8 @@ function validarCPF(cpf){
         return;
     }
     else if(cpf.value.length == 11){
-        for (c=0; c<cpf.value.length; c++){
-            if (!(cpf.value[c]>='0' && cpf.value[c]<='9')){
+        for (c = 0; c < cpf.value.length; c++){
+            if (!(cpf.value[c] >= '0' && cpf.value[c] <= '9')){
                 alert('CPF só pode ter dígitos. Caracter "' + cpf.value[c] + '" inválido');
                 return;
             };
@@ -41,10 +36,9 @@ function validarCPF(cpf){
     };
 
     //validando os digitos do cpf
-
 function calculaDV(num) {
-    var resto=0, 
-        soma=0;
+    var resto = 0, 
+        soma  = 0;
 
     for (i = 2; i < 11; i++) {
         soma = soma + ((num % 10) * i);
@@ -53,20 +47,60 @@ function calculaDV(num) {
     resto = (soma % 11);
     return (resto > 1) ? (11 -resto) : 0;
 };
+    var digitosCPF = cpf.value.slice(-2, cpf.value.length);
+    var identCPF = cpf.value.slice(0, 9); 
 
-var digitosCPF = cpf.value.slice(-2, cpf.value.length);
-var identCPF = cpf.value.slice(0, 9); 
+    primeiro_digito = calculaDV(identCPF)
+    segundo_digito  = calculaDV(identCPF * 10 + primeiro_digito)
 
-primeiro_digito = calculaDV(identCPF)
-segundo_digito = calculaDV(identCPF* 10 + primeiro_digito)
-
-if (digitosCPF[0] != primeiro_digito || digitosCPF[1] != segundo_digito) {
-    alert("Digitos verificadores inválidos!");
+    if (digitosCPF[0] != primeiro_digito || digitosCPF[1] != segundo_digito) {
+        alert("Digitos verificadores inválidos!");
             return; 
-}
-
+    };
 };
-   
-   
+
+    //fazendo lista de compras  
+function listaCompra(){
+
+    var lista = document.getElementById("Produtos");
+    var produto = lista.value;
+
+    var listaProd = {   'Death Note - DVD - Completo'   :'85.00',
+                        'Naruto Shippuden T01 Box 01'   :'60.00',
+                        'Naruto Shippuden T01 Box 02'   :'60.00',
+                        'Naruto Gold - 55 Vol.'         :'1000.00',
+                        'Attack on Titan - Vol 1-4'     :'130.00',
+                        'Attack on Titan - Vol 5-8'     :'130.00',
+                        'Naruto Box P01 Vol 1-27'       :'600.00',
+                        'Naruto Shippuden - PVC'        :'210.00',
+                        'Ryuk - Death Note - PVC'       :'250.00',
+    };
+
+    if(produto == "0"){
+        alert("Nenhum produto selecionado");
+    }
+    else{
+        produtoTotal =  document.getElementById("listaPedidos");
+        valor        =  document.getElementById("valorTotal");
+ 
+        produtoTotal.innerHTML += lista.options[produto].innerHTML+"\n";  
+        
+        if (valor.value == "") {
+            valor.value = parseFloat(listaProd[lista.options[produto].innerHTML]).toFixed(2);
+        }
+        else {
+            valor.value = valor.value = (parseFloat(valor.value) + parseFloat(listaProd[lista.options[produto].innerHTML])).toFixed(2);
+       };       
+    };
+};
+
+    //limpando tudo
+function limpar()
+{
+   document.getElementById("listaPedidos", "valorTotal").innerHTML="";  
+} 
+
+
+  
 
 

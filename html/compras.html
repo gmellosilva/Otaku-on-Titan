@@ -52,7 +52,7 @@
 	                <div class='meiaLinEsq'>
 						<div class="divLinha">                        
 	                        <label for="cpf" class="colPri">CPF:</label>
-	                        <input type="text" name="cpf" id="cpf" pattern=”(\d{3}\d{3}\d{3}\d{2})|(\d{11})” onchange="validarCPF(this);" class="impMedio">
+	                        <input type="text" name="cpf" id="cpf" pattern=”(\d{11})” onchange="validarCPF(this);" class="impMedio">
 	                    </div>
 
 						<div class="divLinha">	
@@ -72,31 +72,31 @@
 					<div class="divLinha">	
 						Produtos:<br>
 							<select id="Produtos" name="Produtos"> 
-								<option selected>------</option>
+								<option value=0 selected>------</option>
 								<optgroup label="Anime">
-									<option value="dnDVD">Death Note - DVD - Completo</option>
-									<option value="nsBOX1">Naturo Shippuden T01 Box 01</option>
-									<option value="nsBOX2">Naruto Shippuden T01 Box 02</option>
+									<option value=1>Death Note - DVD - Completo</option>
+									<option value=2>Naturo Shippuden T01 Box 01</option>
+									<option value=3>Naruto Shippuden T01 Box 02</option>
 								</optgroup>
 
 								<optgroup label="Mangá">
-									<option value="nGold">Naruto Gold - 55 Vol.</option>
-									<option value="aot1">Attack on Titan - Vol 1 - 4</option>
-									<option value="aot2">Attack on Titan - Vol 5 - 8</option>
-									<option value="nBOX1">Naruto Box P01 Vol 1 - 27</option>
+									<option value=4>Naruto Gold - 55 Vol.</option>
+									<option value=5>Attack on Titan - Vol 1 - 4</option>
+									<option value=6>Attack on Titan - Vol 5 - 8</option>
+									<option value=7>Naruto Box P01 Vol 1 - 27</option>
 								</optgroup>
 
 								<optgroup label="Action Figure">
-									<option value="nsPVC">Naruto Shippuden - PVC</option>
-									<option value="ryukPVC">Ryuk - Death Note - PVC</option>
+									<option value=8>Naruto Shippuden - PVC</option>
+									<option value=9>Ryuk - Death Note - PVC</option>
 								</optgroup>
 							</select>
 							
-							<input type="button" value="Comprar">		
+							<input type="button" onclick="listaCompra();" value="Comprar">		
 					</div>
 
 					<br>		
-					<textarea class="elemDir" name="listaPedidos" readonly cols="23" rows="10"></textarea>
+					<textarea class="elemDir" name="listaPedidos" id="listaPedidos" readonly cols="23" rows="10"></textarea>
 
 						<fieldset class="fsEsq">
 							<legend>Dados do Cartão&nbsp;</legend>
@@ -121,11 +121,11 @@
 								</div>				
 						</fieldset>	
 									
-						<label for="valor" class="elemDir" >Valor: R$ <input type="text" name="valor" class="impMedio" readonly></label>
+						<label for="valorTotal" class="elemDir" >Valor: R$ <input type="text" name="valorTotal" id="valorTotal" class="impMedio" readonly></label>
 			</fieldset>	
 			<div class="botoes">	
 				<input type="submit" value="Enviar">
-				<input type="reset" value="Limpar">
+				<input type="reset" onclick="limpar()" value="Limpar">
 			</div>	
 		</form>										
 	</section>
